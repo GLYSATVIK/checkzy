@@ -1,0 +1,17 @@
+{
+    "name": "wandpen-ai",
+    "version": "1.0.0",
+    "description": "AI Chat & Writing Assistant",
+    "scripts": {
+        "build": "node build.js",
+        "watch": "node build.js --watch"
+    },
+    "dependencies": {
+        "lucide-static": "^0.368.0"
+    },
+    "devDependencies": {
+        "esbuild": "^0.20.2",
+        "typescript": "^5.4.3",
+        "@types/chrome": "^0.0.263"
+    }
+}

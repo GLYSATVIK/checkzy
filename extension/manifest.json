@@ -1,0 +1,48 @@
+{
+    "manifest_version": 3,
+    "name": "Checkzy AI",
+    "version": "1.0.0",
+    "description": "AI Writing Assistant",
+    "permissions": [
+        "activeTab",
+        "storage",
+        "scripting",
+        "contextMenus"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "css": [
+                "ui.css"
+            ],
+            "run_at": "document_end",
+            "all_frames": true
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "Checkzy Settings"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "ui.css",
+                "icons/*"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}
